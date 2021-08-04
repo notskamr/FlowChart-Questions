@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" value="">
+    <br>
+    <button onclick="generate()">Generate</button> <br>
+    <p id="output"></p>
+
+    <p id="warning"></p>
+
+
+    <p id="counter">Counter: </p>
+
+    <script>
+
+var xc = 0
+        function generate() {
+            
+            
+        var x = document.getElementById("input").value;
+        
+        var printOut = ""
+        var warning = ""
+
+        if(xc != 20)
+        {
+            if(x % 2 != 0) {
+                printOut = x;
+                xc++
+            }
+
+            else {
+                printOut = "Even";
+                xc++
+            }
+        }
+
+        else {
+           xc = "More than 20!"
+        }
+
+
+        document.getElementById("output").innerHTML = printOut;
+        document.getElementById("counter").innerHTML = "Counter: " + xc;
+    }
+    
+    </script>
+</body>
+
+</html>
